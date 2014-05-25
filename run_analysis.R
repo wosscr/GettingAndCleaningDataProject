@@ -77,3 +77,6 @@ shapedDataMedians <- dcast(shapedData, activitynames + subject ~ variable, mean)
 
 # write the result in a file as result
 write.table(shapedDataMedians, file = "./data/tidyData.txt")
+
+# free the memory
+rm(list = ls())
